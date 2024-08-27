@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- The <title> element specifies the title of the web page, displayed on the browser tab -->
         <title>Node Frontend</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <!-- Link to the Bootstrap CSS file hosted on a CDN (Content Delivery Network)
+             Bootstrap is a popular CSS framework that helps in creating responsive and modern web designs. -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+              rel="stylesheet" 
+              integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+              crossorigin="anonymous">
     </head>
     <body>
+        <!-- A Bootstrap container class for a responsive fixed-width container -->
         <div class="container-md">
+            <!-- A heading for the application, aligned to the start (left) -->
             <h2 class="text-start">Node Frontend Demo App</h2>
+            
+            <!-- The form element defines an HTML form to collect user input
+                 - action="/submit": Specifies that the form data will be sent to the /submit route on the server.
+                 - method="POST": Specifies that the form will be submitted using the POST method. -->
             <form action="/submit" method="POST">
+                
+                <!-- A Bootstrap class for a margin-bottom spacing of 3 (mb-3)
+                     This div contains the label and input field for the user to enter text. -->
                 <div class="mb-3">
+                    <!-- A label for the input field, using Bootstrap's form-label class for styling -->
                     <label for="userInput" class="form-label">Enter your text here</label>
+                    
+                    <!-- An input field for the user to type their text
+                         - type="text": Specifies that this input field is a text box.
+                         - class="form-control": Applies Bootstrap styling to the input field.
+                         - id="userInput": The ID that associates this input with the label above.
+                         - name="userInput": The name attribute, which will be used as the key when submitting form data. -->
                     <input type="text" class="form-control" id="userInput" name="userInput">
                 </div>
+                
+                <!-- Another Bootstrap margin-bottom class for spacing, this time with a value of 4 (mb-4) -->
                 <div class="mb-4">
+                    <!-- A submit button that, when clicked, sends the form data to the server
+                         - type="submit": Indicates that this is a submit button.
+                         - class="btn btn-info": Applies Bootstrap button styling, with the "info" color scheme. -->
                     <button type="submit" class="btn btn-info">Send to Backend</button>
                 </div>
             </form>
